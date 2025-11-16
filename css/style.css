@@ -1,0 +1,1194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+/* 🔹 الشريط العلوي جداً */
+.top-links {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.top-links .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+}
+
+.top-links ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.top-links ul li {
+  margin-left: 15px;
+}
+
+/* 🔸 الروابط */
+.top-links a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* ✨ تأثير الخطين */
+.top-links a::before,
+.top-links a::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: #ff6f61;
+  transition: height 0.4s ease;
+}
+
+.top-links a::before {
+  left: -6px;
+  bottom: 0;
+}
+
+.top-links a::after {
+  right: -6px;
+  top: 0;
+}
+
+.top-links a:hover {
+  color: #ff6f61;
+}
+
+.top-links a:hover::before {
+  height: 100%;
+}
+
+.top-links a:hover::after {
+  height: 100%;
+}
+
+/* 🔸 الأيقونات في اليمين */
+.right-links a i {
+  margin-right: 5px;
+  color: #000;
+  transition: color 0.3s ease, transform 0.5s ease;
+}
+
+/* ✨ التأثير الجديد */
+.right-links a i:hover {
+  color: #ff6f61;
+  transform: rotateY(180deg);
+}
+
+
+
+/* 🌸 الهيدر الأساسي */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.logo h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.logo span {
+  color: #ff6f61;
+}
+
+/* 🔹 النافبار */
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  padding: 8px 15px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+/* 🧡 تأثير المستطيل على اللينكات الأساسية فقط */
+.navbar > ul > li > a::before,
+.navbar > ul > li > a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 2px solid #ff6f61;
+  transition: all 0.3s ease;
+}
+
+.navbar > ul > li > a::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.navbar > ul > li > a::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.navbar > ul > li > a:hover {
+  color: #ff6f61;
+}
+
+.navbar > ul > li > a:hover::before,
+.navbar > ul > li > a:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+/* 🔹 القايمة المنسدلة */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* 🔸 الأعمدة داخل القايمة */
+.dropdown-column {
+  width: 50%;
+}
+
+.dropdown-column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  border-bottom: 2px solid #0a0a0a;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* 🔹 الروابط داخل القايمة */
+.dropdown-column a {
+  display: block;
+  color: #000;
+  font-size: 15px;
+  padding: 6px 0;
+  transition: all 0.3s ease;
+}
+
+.dropdown-column a:hover {
+  color: #ff6f61;
+  transform: scale(1.1);
+}
+
+/* 🔹 أيقونات الهيدر */
+.header-icons {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header-icons a {
+  margin-left: 20px;
+  color: #000;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.header-icons a:hover {
+  color: #ff6f61;
+}
+
+/* 🔹 إشعار العربة */
+.cart-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -15px;
+  right: -1px;
+  background: #ff6f61;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.cart-icon:hover .cart-badge {
+  transform: translateY(-4px);
+}
+
+
+/* 🔹 الشريط الأسود */
+.sale-bar {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.sale-bar p {
+  font-size: 16px;
+  display: inline-block;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.sale-bar a {
+  color: #fff5f3;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* ✨ عند تمرير الماوس على Shop Now */
+.sale-bar a:hover {
+ 
+  transform: scale(1.2);
+}
+
+/* ✨ تكبير الفقرة كلها لما نعمل hover على Shop Now */
+.sale-bar p:has(a:hover) {
+  transform: scale(1.08);
+}
+
+
+
+
+/* 🔹 سكشن الصورة */
+.hero {
+  background-color: #fff5f3;
+  padding: 80px 0;
+  height: 550px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* النص في النص تمام */
+.hero-content {
+  text-align: center;
+  flex: 1;
+  margin-top: 100px;
+}
+
+.hero-content h3 {
+  font-family: 'Great Vibes', cursive; /* نفس الخط */
+  color: #ff6f61;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  padding: 17px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+ 
+ 
+}
+
+.btn:hover {
+  background-color: #ff6f61;
+}
+
+/* الصورة */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* 🔹 سكشن التصنيفات */
+.categories {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.categories .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.category-card {
+  height: 350px;
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 1s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: all 0.3s ease;
+}
+
+.text-box {
+  text-align: center;
+  color: #fff;
+  transition: transform 0.4s ease;
+  margin-bottom: 40px;
+}
+
+.overlay h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* 🔸 زر Shop Now */
+.shop-now {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 2px solid #fff;
+  opacity: 0;
+  transform: translateY(40px) scale(1); /* موقعها تحت + حجمها الطبيعي */
+  transition: 
+    opacity 2s ease,
+    transform 2s cubic-bezier(0.25, 1.2, 0.5, 1.0);
+}
+
+/* ✨ التأثير عند Hover على الكارد */
+.category-card:hover .overlay h3 {
+  transform: translateY(-40px);
+}
+
+.category-card:hover .shop-now {
+  opacity: 1;
+  transform: translateY(-10px) scale(1); /* تظهر وتطلع */
+}
+
+/* 💫 لما نعمل hover على Shop Now هي نفسها */
+.shop-now:hover {
+    transform: scale(1.5); /* نفس الوضع بس بتكبر */
+  transition: transform .3s ease;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ===== Trending This Week — updated image overlay rotateY effect ===== */
+
+.trending {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.trending .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.trending-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.trending-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+}
+
+.trending-tabs {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.trending-tabs li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+}
+
+.trending-tabs li a.active {
+  color: #e74c3c;
+}
+
+.trending-tabs li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #e74c3c;
+}
+
+/* 🔹 4 أعمدة */
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* 3D depth */
+.product-card {
+  text-align: center;
+  perspective: 1400px;
+}
+
+/* container for images */
+.image-flip {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
+
+/* الصورة الأساسية — ثابتة */
+.image-flip img.front {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+/* الصورة اللي فوق — بتظهر وتلف */
+.image-flip img.back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+
+  opacity: 0;
+  transform: rotateY(-90deg);
+  transform-origin: center; 
+  backface-visibility: hidden;
+
+  transition:
+    transform 2s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.6s ease;
+}
+
+/* حركة الصورة عند الـ hover */
+.product-card:hover .image-flip img.back {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+/* تأثير بسيط على الصورة الثابتة */
+.product-card:hover .image-flip img.front {
+  filter: brightness(0.8);
+}
+
+.product-card h4 {
+  margin: 15px 0 10px;
+  font-size: 18px;
+  color: #222;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.price .new {
+  color: #222;
+  font-weight: bold;
+}
+
+.price .old {
+  color: #888;
+  text-decoration: line-through;
+}
+.image-flip img.back {
+  z-index: 2;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+/* 🔹 سكشن Testimonial */
+.testimonial {
+  background-color:#fff5f3;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+}
+
+.testimonial .container {
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.testimonial h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+/* 🔹 الفقرة بثلاث سطور */
+.testimonial-text {
+  color: #555;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;        /* يخليها 3 سطور */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.customer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.customer img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.customer-info h4 {
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 3px;
+}
+
+.customer-info p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* 🔹 الأسهم معدّلة */
+.arrows {
+  position: absolute;
+  top: 50%;
+  left: -90px;   /* تبعيد السهم اليسار */
+  right: -90px;  /* تبعيد السهم اليمين */
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.arrows i {
+  font-size: 26px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  pointer-events: auto;
+}
+
+.arrows i:hover {
+  color: #000;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ===== YOU MAY LIKE Section ===== */
+.you-may-like {
+  text-align: center;
+  padding: 120px 60px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+}
+
+.you-may-like h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #111;
+}
+
+.product-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* المسافة بين الكروت */
+  position: relative;
+  flex-wrap: nowrap; /* يمنع النزول لسطر جديد */
+}
+
+.product-item {
+  width: 300px;  /* ✅ قللنا العرض */
+  text-align: center;
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 300px; /* ✅ زودنا الارتفاع */
+}
+
+/* الصورة الأصلية */
+.product-image .main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.6s ease;
+}
+
+/* الصورة التانية */
+.product-image .hover-img {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 12px;
+  transition: all 1.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* عند hover */
+.product-image:hover .hover-img {
+  top: 0;
+  opacity: 1;
+}
+
+.product-image:hover .main-img {
+  transform: scale(1.05);
+  filter: brightness(75%);
+}
+
+/* الأيقونات */
+.product-icons {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 18px;
+  background: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.4s ease;
+}
+
+.product-image:hover .product-icons {
+  bottom: 25px;
+}
+
+.product-icons i {
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-icons i:hover {
+  color: #e74c3c;
+}
+
+/* النصوص */
+.product-name {
+  margin-top: 18px;
+  font-size: 18px;
+  color: #222;
+  font-weight: 500;
+}
+
+.product-name.active {
+  color: #e74c3c;
+}
+
+.product-price {
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+.new-price {
+  color: #000;
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.old-price {
+  color: #777;
+  text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.latest-news {
+  text-align: center;
+  background-color: #fff5f3;
+  padding: 70px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.latest-news h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #000;
+}
+
+.news-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.news-item {
+  width: 360px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.image-container {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.news-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+  border-radius: 12px;
+}
+
+.news-item:hover img {
+  transform: scale(1.08);
+}
+
+.news-item .category {
+  font-size: 1rem;
+  color: #777;
+  margin: 16px 0 8px;
+}
+
+.news-item .title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+  transition: color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.news-item:hover .title {
+  color: #e63946;
+}
+
+.news-item .desc {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.news-item .read-more {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: #111;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.news-item .read-more:hover {
+  transform: scale(1.1);
+  color: #e63946;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ========== Services Section ========== */
+.services {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 100px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+}
+
+.service {
+  text-align: center;
+  max-width: 220px;
+  position: relative;
+}
+
+.icon-layer {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+
+.icon-layer i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 45px;
+  color: #ccc; /* رمادي فاتح */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.icon-layer .hover-icon {
+  color: #444; /* رمادي غامق */
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.icon-layer:hover .hover-icon {
+  opacity: 1;
+  transform: translateY(0) scale(1.05);
+}
+
+.icon-layer:hover i:not(.hover-icon) {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* ✅ قرب النص من الأيقونة */
+.service h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  margin-top: 20px; /* كانت 60px ↓ قربناها */
+}
+
+.service p {
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* ========== Footer Section ========== */
+/* 🌙 Footer */
+footer {
+      background-color: #111;
+      color: #fff;
+      padding: 60px 80px 30px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ---- Newsletter Section ---- */
+    .newsletter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 30px;
+    }
+
+    .newsletter h3 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .newsletter p {
+      color: #ccc;
+      font-size: 15px;
+      margin-top: 15px;
+    }
+
+    .subscribe-area {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      width: 100vw;
+    }
+
+    .subscribe-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+     
+      margin: auto;
+      margin-top: -50px;
+      margin-right: 300px;
+    }
+
+    .subscribe-box input {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      width: 350px;
+      outline: none;
+    }
+
+    .subscribe-box button {
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .subscribe-box button:hover {
+      transform: scale(1.1);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: -50px;
+    }
+
+    .social-icons a {
+      color: #bbb;
+      font-size: 22px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+      transform: scale(1.3);
+    }
+
+    /* ---- Footer Links ---- */
+    .footer-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      color: #ccc;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .footer-column ul li:hover {
+      transform: scale(1.08);
+    }
+
+    .footer-column ul li:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+    }
+
+    /* ---- Footer Logo ---- */
+    .footer-logo h2 {
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .footer-logo i {
+      color: #e63946;
+      margin-right: 8px;
+    }
+
+    /* ---- Bottom Section ---- */
+    .footer-bottom {
+      text-align: center;
+      margin-top: 50px;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+      color: #999;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-bottom i {
+      color: #000;
+      font-size: 16px;
+      margin: 0 5px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        color: #000;
+      }
+      50% {
+        transform: scale(1.3);
+        color: #e63946;
+      }
+      100% {
+        transform: scale(1);
+        color: #000;
+      }
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 768px) {
+      footer {
+        padding: 40px 30px;
+      }
+      .newsletter {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      .subscribe-area {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-links {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
