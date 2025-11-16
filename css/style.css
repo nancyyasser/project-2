@@ -9,7 +9,7 @@ body {
   background-color: #fff;
   color: #000;
 }
-/* 🔹 الشريط العلوي جداً */
+
 .top-links {
   background-color: #fff;
   border-bottom: 1px solid #eee;
@@ -35,7 +35,7 @@ body {
   margin-left: 15px;
 }
 
-/* 🔸 الروابط */
+
 .top-links a {
   position: relative;
   text-decoration: none;
@@ -43,7 +43,7 @@ body {
   transition: color 0.3s ease;
 }
 
-/* ✨ تأثير الخطين */
+
 .top-links a::before,
 .top-links a::after {
   content: "";
@@ -76,14 +76,14 @@ body {
   height: 100%;
 }
 
-/* 🔸 الأيقونات في اليمين */
+
 .right-links a i {
   margin-right: 5px;
   color: #000;
   transition: color 0.3s ease, transform 0.5s ease;
 }
 
-/* ✨ التأثير الجديد */
+
 .right-links a i:hover {
   color: #ff6f61;
   transform: rotateY(180deg);
@@ -91,7 +91,7 @@ body {
 
 
 
-/* 🌸 الهيدر الأساسي */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -119,7 +119,7 @@ body {
   color: #ff6f61;
 }
 
-/* 🔹 النافبار */
+
 .navbar ul {
   list-style: none;
   display: flex;
@@ -140,7 +140,7 @@ body {
   transition: color 0.3s;
 }
 
-/* 🧡 تأثير المستطيل على اللينكات الأساسية فقط */
+
 .navbar > ul > li > a::before,
 .navbar > ul > li > a::after {
   content: "";
@@ -175,7 +175,7 @@ body {
   height: 100%;
 }
 
-/* 🔹 القايمة المنسدلة */
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -200,7 +200,7 @@ body {
   transform: translateY(0);
 }
 
-/* 🔸 الأعمدة داخل القايمة */
+
 .dropdown-column {
   width: 50%;
 }
@@ -215,7 +215,7 @@ body {
   padding-bottom: 5px;
 }
 
-/* 🔹 الروابط داخل القايمة */
+
 .dropdown-column a {
   display: block;
   color: #000;
@@ -229,7 +229,7 @@ body {
   transform: scale(1.1);
 }
 
-/* 🔹 أيقونات الهيدر */
+
 .header-icons {
   position: relative;
   display: flex;
@@ -247,7 +247,7 @@ body {
   color: #ff6f61;
 }
 
-/* 🔹 إشعار العربة */
+
 .cart-icon {
   position: relative;
   display: flex;
@@ -277,7 +277,7 @@ body {
 }
 
 
-/* 🔹 الشريط الأسود */
+
 .sale-bar {
   background-color: #000;
   color: #fff;
@@ -298,13 +298,13 @@ body {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* ✨ عند تمرير الماوس على Shop Now */
+
 .sale-bar a:hover {
  
   transform: scale(1.2);
 }
 
-/* ✨ تكبير الفقرة كلها لما نعمل hover على Shop Now */
+
 .sale-bar p:has(a:hover) {
   transform: scale(1.08);
 }
@@ -312,7 +312,7 @@ body {
 
 
 
-/* 🔹 سكشن الصورة */
+
 .hero {
   background-color: #fff5f3;
   padding: 80px 0;
@@ -328,7 +328,7 @@ body {
   gap: 50px;
 }
 
-/* النص في النص تمام */
+
 .hero-content {
   text-align: center;
   flex: 1;
@@ -336,7 +336,7 @@ body {
 }
 
 .hero-content h3 {
-  font-family: 'Great Vibes', cursive; /* نفس الخط */
+  font-family: 'Great Vibes', cursive; 
   color: #ff6f61;
   font-size: 35px;
   margin-bottom: 10px;
@@ -373,7 +373,7 @@ body {
   background-color: #ff6f61;
 }
 
-/* الصورة */
+
 .hero-image {
   flex: 1;
   display: flex;
@@ -388,7 +388,7 @@ body {
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* 🔹 سكشن التصنيفات */
+
 .categories {
   background-color: #fff;
   padding: 80px 0;
@@ -447,7 +447,7 @@ body {
   transition: transform 1s ease, opacity 1s ease;
 }
 
-/* 🔸 زر Shop Now */
+
 .shop-now {
   display: inline-block;
   color: #fff;
@@ -456,31 +456,31 @@ body {
   text-decoration: none;
   border-bottom: 2px solid #fff;
   opacity: 0;
-  transform: translateY(40px) scale(1); /* موقعها تحت + حجمها الطبيعي */
+  transform: translateY(40px) scale(1); 
   transition: 
     opacity 2s ease,
     transform 2s cubic-bezier(0.25, 1.2, 0.5, 1.0);
 }
 
-/* ✨ التأثير عند Hover على الكارد */
+
 .category-card:hover .overlay h3 {
   transform: translateY(-40px);
 }
 
 .category-card:hover .shop-now {
   opacity: 1;
-  transform: translateY(-10px) scale(1); /* تظهر وتطلع */
+  transform: translateY(-10px) scale(1); 
 }
 
-/* 💫 لما نعمل hover على Shop Now هي نفسها */
+
 .shop-now:hover {
-    transform: scale(1.5); /* نفس الوضع بس بتكبر */
+    transform: scale(1.5); 
   transition: transform .3s ease;
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* ===== Trending This Week — updated image overlay rotateY effect ===== */
+
 
 .trending {
   background-color: #fff;
@@ -534,20 +534,20 @@ body {
   background: #e74c3c;
 }
 
-/* 🔹 4 أعمدة */
+
 .products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
-/* 3D depth */
+
 .product-card {
   text-align: center;
   perspective: 1400px;
 }
 
-/* container for images */
+
 .image-flip {
   position: relative;
   width: 100%;
@@ -557,7 +557,7 @@ body {
   transform-style: preserve-3d;
 }
 
-/* الصورة الأساسية — ثابتة */
+
 .image-flip img.front {
   position: absolute;
   inset: 0;
@@ -569,7 +569,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* الصورة اللي فوق — بتظهر وتلف */
+
 .image-flip img.back {
   position: absolute;
   inset: 0;
@@ -588,13 +588,13 @@ body {
     opacity 0.6s ease;
 }
 
-/* حركة الصورة عند الـ hover */
+
 .product-card:hover .image-flip img.back {
   opacity: 1;
   transform: rotateY(0deg);
 }
 
-/* تأثير بسيط على الصورة الثابتة */
+
 .product-card:hover .image-flip img.front {
   filter: brightness(0.8);
 }
@@ -625,7 +625,7 @@ body {
   z-index: 2;
 }
 /* ////////////////////////////////////////////////////////////////////////////////////////// */
-/* 🔹 سكشن Testimonial */
+
 .testimonial {
   background-color:#fff5f3;
   text-align: center;
@@ -646,7 +646,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* 🔹 الفقرة بثلاث سطور */
+
 .testimonial-text {
   color: #555;
   font-size: 17px;
@@ -657,7 +657,7 @@ body {
   margin-right: auto;
   text-align: center;
   display: -webkit-box;
-  -webkit-line-clamp: 3;        /* يخليها 3 سطور */
+  -webkit-line-clamp: 3;     
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -687,12 +687,12 @@ body {
   font-size: 14px;
 }
 
-/* 🔹 الأسهم معدّلة */
+
 .arrows {
   position: absolute;
   top: 50%;
-  left: -90px;   /* تبعيد السهم اليسار */
-  right: -90px;  /* تبعيد السهم اليمين */
+  left: -90px;   
+  right: -90px; 
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);
@@ -711,7 +711,7 @@ body {
   color: #000;
 }
 /* //////////////////////////////////////////////////////////////////////////////////////////////// */
-/* ===== YOU MAY LIKE Section ===== */
+
 .you-may-like {
   text-align: center;
   padding: 120px 60px;
@@ -730,13 +730,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px; /* المسافة بين الكروت */
+  gap: 40px; 
   position: relative;
-  flex-wrap: nowrap; /* يمنع النزول لسطر جديد */
+  flex-wrap: nowrap; 
 }
 
 .product-item {
-  width: 300px;  /* ✅ قللنا العرض */
+  width: 300px;  
   text-align: center;
 }
 
@@ -744,10 +744,10 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  height: 300px; /* ✅ زودنا الارتفاع */
+  height: 300px; 
 }
 
-/* الصورة الأصلية */
+
 .product-image .main-img {
   width: 100%;
   height: 100%;
@@ -756,7 +756,7 @@ body {
   transition: all 0.6s ease;
 }
 
-/* الصورة التانية */
+
 .product-image .hover-img {
   position: absolute;
   top: -100%;
@@ -768,7 +768,7 @@ body {
   transition: all 1.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* عند hover */
+
 .product-image:hover .hover-img {
   top: 0;
   opacity: 1;
@@ -779,7 +779,7 @@ body {
   filter: brightness(75%);
 }
 
-/* الأيقونات */
+
 .product-icons {
   position: absolute;
   bottom: -70px;
@@ -808,7 +808,7 @@ body {
   color: #e74c3c;
 }
 
-/* النصوص */
+
 .product-name {
   margin-top: 18px;
   font-size: 18px;
@@ -934,7 +934,7 @@ body {
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* ========== Services Section ========== */
+
 .services {
   display: flex;
   justify-content: space-around;
@@ -964,12 +964,12 @@ body {
   top: 0;
   left: 0;
   font-size: 45px;
-  color: #ccc; /* رمادي فاتح */
+  color: #ccc; 
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .icon-layer .hover-icon {
-  color: #444; /* رمادي غامق */
+  color: #444; 
   opacity: 0;
   transform: translateY(10px);
 }
@@ -984,12 +984,12 @@ body {
   transform: translateY(-10px);
 }
 
-/* ✅ قرب النص من الأيقونة */
+
 .service h4 {
   font-size: 1rem;
   font-weight: 600;
   color: #111;
-  margin-top: 20px; /* كانت 60px ↓ قربناها */
+  margin-top: 20px; 
 }
 
 .service p {
@@ -998,8 +998,8 @@ body {
   margin-top: 5px;
 }
 
-/* ========== Footer Section ========== */
-/* 🌙 Footer */
+
+
 footer {
       background-color: #111;
       color: #fff;
@@ -1007,7 +1007,7 @@ footer {
       font-family: 'Poppins', sans-serif;
     }
 
-    /* ---- Newsletter Section ---- */
+  
     .newsletter {
       display: flex;
       justify-content: space-between;
@@ -1086,7 +1086,7 @@ footer {
       transform: scale(1.3);
     }
 
-    /* ---- Footer Links ---- */
+  
     .footer-links {
       display: flex;
       justify-content: space-between;
@@ -1129,7 +1129,7 @@ footer {
       background: currentColor;
     }
 
-    /* ---- Footer Logo ---- */
+   
     .footer-logo h2 {
       font-size: 1.8rem;
       color: #fff;
@@ -1140,7 +1140,7 @@ footer {
       margin-right: 8px;
     }
 
-    /* ---- Bottom Section ---- */
+   
     .footer-bottom {
       text-align: center;
       margin-top: 50px;
@@ -1173,7 +1173,7 @@ footer {
       }
     }
 
-    /* ---- Responsive ---- */
+   
     @media (max-width: 768px) {
       footer {
         padding: 40px 30px;
